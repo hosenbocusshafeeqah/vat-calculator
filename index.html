@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAT Calculator | Mauritius</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="calculator">
+    <header>
+      <div class="logo">M</div>
+      <p class="eyebrow">SMART FINANCE TOOL</p>
+      <h1>VAT Calculator</h1>
+      <p class="subtitle">Calculate VAT simply and accurately.</p>
+    </header>
+
+    <section class="form">
+      <label for="amount">Amount (MUR)</label>
+      <div class="input-wrap">
+        <span>Rs</span>
+        <input id="amount" type="number" min="0" step="any" value="1000">
+      </div>
+
+      <label for="mode">Calculation mode</label>
+      <select id="mode">
+        <option value="add">Add VAT</option>
+        <option value="remove">Remove VAT</option>
+      </select>
+
+      <label for="rate">VAT rate (%)</label>
+      <div class="input-wrap">
+        <input id="rate" type="number" min="0" max="100000" step="any" value="15">
+        <span>%</span>
+      </div>
+
+      <p id="error" role="alert"></p>
+    </section>
+
+    <section class="results" aria-live="polite">
+      <div class="result-row">
+        <span>Net amount</span>
+        <strong id="net">—</strong>
+      </div>
+      <div class="result-row">
+        <span>VAT amount</span>
+        <strong id="vat">—</strong>
+      </div>
+      <div class="result-row total">
+        <span>Gross amount</span>
+        <strong id="gross">—</strong>
+      </div>
+    </section>
+
+    <button id="reset" type="button">Reset calculator ↺</button>
+    <footer>Made for Mauritius · MUR currency</footer>
+  </main>
+</body>
+</html>
